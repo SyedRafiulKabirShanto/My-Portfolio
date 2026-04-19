@@ -21,7 +21,7 @@ npm run dev
 
 Put your photo at:
 
-- `public/shanto.jpg`
+- `src\assets\shanto.png`
 
 The UI will show a fallback card if the image is missing.
 
