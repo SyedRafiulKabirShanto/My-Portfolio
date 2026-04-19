@@ -26,7 +26,7 @@ export const profile: Profile = {
     github: 'https://github.com/SyedRafiulKabir',
   },
   photo: {
-    src: '/src/assets/shanto.png',
+    src: `${import.meta.env.BASE_URL}${import.meta.env.VITE_PROFILE_PHOTO || 'shanto.png'}`,
     alt: 'Portrait of Syed Rafiul Kabir',
   },
 }

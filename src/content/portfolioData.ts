@@ -8,8 +8,8 @@ import type { PortfolioData } from '../types/portfolio'
 export const defaultPortfolioData: PortfolioData = {
   profile,
   cv: {
-    src: '/src/assets/cv.pdf',
-    fileName: 'Syed-Rafiul-Kabir-CV.pdf',
+    src: `${import.meta.env.BASE_URL}${import.meta.env.VITE_CV_FILE || 'cv.pdf'}`,
+    fileName: import.meta.env.VITE_CV_DOWNLOAD_NAME || 'Syed-Rafiul-Kabir-CV.pdf',
   },
   education,
   experience,
