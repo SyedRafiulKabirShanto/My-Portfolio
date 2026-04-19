@@ -31,7 +31,7 @@ export const projects: Project[] = [
   {
     title: 'Intelisale',
     workplace: 'Brain Station 23',
-    domainTags: ['NopCommerce', 'Performance', 'Background Processing'],
+    domainTags: ['NopCommerce', 'Performance', 'Background Jobs'],
     tech: ['ASP.NET Core', 'MVC / Razor', 'MS SQL'],
     responsibilities: [
       'Re-engineered core services to handle complex background calculations and improved overall performance.',
@@ -43,7 +43,7 @@ export const projects: Project[] = [
   {
     title: 'AmTab',
     workplace: 'Brain Station 23',
-    domainTags: ['NopCommerce', 'Stability', 'Performance'],
+    domainTags: ['NopCommerce', 'Plugins', 'Performance'],
     tech: ['ASP.NET Core', 'MVC / Razor', 'MS SQL'],
     responsibilities: [
       'Identified and resolved architectural bottlenecks in custom modules to improve stability.',
@@ -55,7 +55,7 @@ export const projects: Project[] = [
   {
     title: 'Multitex ERP',
     workplace: 'MultiTech Systems',
-    domainTags: ['ERP', 'Reporting', 'Data-heavy'],
+    domainTags: ['ERP', 'HR Module', 'Reporting'],
     tech: ['ASP.NET', 'AngularJS', 'RDLC', 'Oracle DB'],
     responsibilities: [
       'Architected Oracle data retrieval workflows to process large datasets for enterprise reports.',
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: 'MPU (FinTech Solution)',
+    title: 'MPU',
     workplace: 'Global Software Architects (GSA)',
     domainTags: ['FinTech', 'Clean Architecture', 'Admin Dashboard'],
     tech: ['ASP.NET Core', 'ADO.NET', 'Angular', 'Kendo UI', 'Clean Architecture'],

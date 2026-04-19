@@ -100,3 +100,29 @@ export function IconPin(props: Props) {
   )
 }
 
+export function IconDownload(props: Props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M12 4.5v9.2"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+      <path
+        d="m8.6 10.7 3.4 3.5 3.4-3.5"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M5 18.5h14"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </Svg>
+  )
+}
+

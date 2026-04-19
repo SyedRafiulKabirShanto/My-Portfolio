@@ -1,8 +1,4 @@
-import { education } from '../../content/education'
-import { experience } from '../../content/experience'
-import { profile } from '../../content/profile'
-import { projects } from '../../content/projects'
-import { skills, skillTiers } from '../../content/skills'
+import { skillTiers } from '../../content/skills'
 import { Section } from '../../shared/ui/Section'
 import { Tag } from '../../shared/ui/Tag'
 import { Card } from '../../shared/ui/Card'
@@ -10,8 +6,10 @@ import { Meter } from '../../shared/ui/Meter'
 import styles from './HomePage.module.css'
 import { LinkButton } from '../../shared/ui/LinkButton'
 import { IconGitHub, IconLinkedIn, IconMail, IconPin } from '../../shared/ui/Icon'
+import type { PortfolioData } from '../../types/portfolio'
 
-export function HomePage() {
+export function HomePage({ data }: { data: PortfolioData }) {
+  const { education, experience, profile, projects, skills } = data
   return (
     <div className={styles.page}>
       <section className={styles.hero} aria-label="Intro">
@@ -56,21 +54,10 @@ export function HomePage() {
           <div className={styles.avatarFrame}>
             <img
               className={styles.avatar}
-              src={profile.photo.publicPath}
+              src={profile.photo.src}
               alt={profile.photo.alt}
               loading="eager"
-              onError={(e) => {
-                const img = e.currentTarget
-                img.style.display = 'none'
-                img.parentElement?.classList.add(styles.avatarFallback)
-              }}
             />
-            <div className={styles.fallbackContent} aria-hidden="true">
-              <div className={styles.fallbackInitials}>SK</div>
-              <div className={styles.fallbackHint}>
-                Add <code>public/shanto.jpg</code>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -167,7 +154,6 @@ export function HomePage() {
               title={p.title}
               right={
                 <div className={styles.tagRow}>
-                  <Tag>{p.workplace}</Tag>
                   {p.domainTags.map((t) => (
                     <Tag key={t}>{t}</Tag>
                   ))}
