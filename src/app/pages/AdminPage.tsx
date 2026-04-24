@@ -297,8 +297,14 @@ export function AdminPage({
                 <label className={[styles.field, styles.full].join(' ')}><span>Tech (comma separated)</span><input value={project.tech.join(', ')} onChange={(e) => {
                   const next = [...draft.projects]; next[i] = { ...next[i], tech: e.target.value.split(',').map((v) => v.trim()).filter(Boolean) }; setDraft({ ...draft, projects: next }); setJsonDraft(JSON.stringify({ ...draft, projects: next }, null, 2))
                 }} /></label>
-                <label className={[styles.field, styles.full].join(' ')}><span>Responsibilities (one per line)</span><textarea value={project.responsibilities.join('\n')} onChange={(e) => {
-                  const next = [...draft.projects]; next[i] = { ...next[i], responsibilities: e.target.value.split('\n').map((v) => v.trim()).filter(Boolean) }; setDraft({ ...draft, projects: next }); setJsonDraft(JSON.stringify({ ...draft, projects: next }, null, 2))
+                <label className={[styles.field, styles.full].join(' ')}><span>Problem</span><textarea value={project.problem} onChange={(e) => {
+                  const next = [...draft.projects]; next[i] = { ...next[i], problem: e.target.value }; setDraft({ ...draft, projects: next }); setJsonDraft(JSON.stringify({ ...draft, projects: next }, null, 2))
+                }} /></label>
+                <label className={[styles.field, styles.full].join(' ')}><span>Solution</span><textarea value={project.solution} onChange={(e) => {
+                  const next = [...draft.projects]; next[i] = { ...next[i], solution: e.target.value }; setDraft({ ...draft, projects: next }); setJsonDraft(JSON.stringify({ ...draft, projects: next }, null, 2))
+                }} /></label>
+                <label className={[styles.field, styles.full].join(' ')}><span>Impact</span><textarea value={project.impact} onChange={(e) => {
+                  const next = [...draft.projects]; next[i] = { ...next[i], impact: e.target.value }; setDraft({ ...draft, projects: next }); setJsonDraft(JSON.stringify({ ...draft, projects: next }, null, 2))
                 }} /></label>
               </div>
             </div>

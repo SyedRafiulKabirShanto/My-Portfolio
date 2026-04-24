@@ -1,7 +1,7 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 26px;
 }
 
 .hero {
@@ -63,8 +63,8 @@
 .subtitle {
   color: var(--text);
   margin: 0;
-  max-width: 66ch;
-  font-size: 15px;
+  max-width: 62ch;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -88,11 +88,31 @@
 }
 
 .ctas {
-  margin-top: 16px;
+  margin-top: 20px;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.secondaryLinks {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.cardText {
+  margin: 0;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .note {
@@ -360,6 +380,27 @@
   gap: 14px;
 }
 
+.projectBody {
+  display: grid;
+  gap: 8px;
+}
+
+.projectLine {
+  margin: 0;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.comingSoon {
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  color: var(--text);
+  font-size: 13px;
+  background: color-mix(in oklab, var(--panel) 50%, transparent);
+}
+
 .tagRow {
   display: inline-flex;
   gap: 8px;
@@ -439,9 +480,24 @@
   line-height: 1.6;
 }
 
+.hero,
+.timelineBody,
+.contactCard {
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.hero:hover,
+.timelineBody:hover,
+.contactCard:hover {
+  transform: translateY(-2px);
+}
+
 @media (max-width: 980px) {
   .hero {
     grid-template-columns: 1fr;
+  }
+  .highlightsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .strengthGrid {
     grid-template-columns: 1fr;
@@ -454,6 +510,24 @@
   }
   .tagRow {
     justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    font-size: clamp(26px, 9.2vw, 34px);
+    line-height: 1.15;
+  }
+  .subtitle {
+    font-size: 15px;
+  }
+  .projectLine,
+  .list,
+  .cardText {
+    font-size: 12.5px;
   }
 }
 

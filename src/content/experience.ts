@@ -13,28 +13,29 @@ export const experience: ExperienceItem[] = [
     start: 'Oct 2025',
     end: 'Present',
     highlights: [
-      'Build and maintain custom NopCommerce-based solutions with a focus on performance and reliability.',
-      'Deliver features end-to-end across backend, integrations, data, and UI with strong ownership.',
+      'Designed and delivered nopCommerce plugin and customization work across versions 4.60-4.90 for enterprise e-commerce platforms.',
+      'Built ERP and accounting integrations using OData and OAuth2-based third-party APIs to streamline operational workflows.',
+      'Optimized SQL-heavy and integration workflows to improve system responsiveness, reliability, and maintainability in production.',
     ],
   },
   {
     company: 'MultiTech Systems',
-    title: 'Associate Software Engineer',
+    title: 'Junior Software Engineer',
     start: 'Apr 2025',
     end: 'Sep 2025',
     highlights: [
-      'Primarily worked on the HR module of the Multitex ERP application.',
-      'Improved system stability and delivery speed through pragmatic refactoring and debugging.',
+      'Built and maintained core features in the Multitex ERP HR module, including attendance, payroll, and reporting workflows.',
+      'Optimized Oracle-backed data processing and debugging workflows to improve reliability for business-critical operations.',
     ],
   },
   {
     company: 'Global Software Architects (GSA)',
-    title: 'Associate Software Engineer',
+    title: 'Junior Software Engineer',
     start: 'Jan 2024',
     end: 'Apr 2025',
     highlights: [
-      'Developed production features in .NET and Angular stacks for real-world business needs.',
-      'Applied OOP, SOLID, and Agile practices to deliver maintainable, testable solutions.',
+      'Delivered production features across ASP.NET Core and Angular applications for FinTech and logistics-focused products.',
+      'Built secure APIs, maintainable backend modules, and enterprise admin interfaces following SOLID and clean architecture practices.',
     ],
   },
 ]

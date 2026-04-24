@@ -16,10 +16,10 @@ export type Profile = {
 
 export const profile: Profile = {
   name: 'Syed Rafiul Kabir',
-  role: 'Software Engineer I',
+  role: 'Software Engineer (.NET | Angular | ERP Integration)',
   location: 'Mirpur DOHS, Dhaka, Bangladesh',
   summary:
-    'Results-driven Software Engineer specializing in the .NET ecosystem and Angular. I build and scale enterprise applications with a focus on performance, reliability, and clean architecture.',
+    'Software Engineer with 2+ years of experience building production-grade backend systems, enterprise integrations, and scalable web applications using ASP.NET Core, SQL Server, and Angular.',
   contact: {
     email: 'mailto:rafiulkabir01.rucse@gmail.com',
     linkedin: 'https://www.linkedin.com/in/syedrafiulkabir/',

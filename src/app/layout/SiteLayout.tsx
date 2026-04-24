@@ -58,6 +58,9 @@ export function SiteLayout({
 
         {isHome ? (
           <nav className={styles.nav} aria-label="Primary">
+            <a className={styles.navLink} href="#highlights">
+              Highlights
+            </a>
             <a className={styles.navLink} href="#strengths">
               Strengths
             </a>
@@ -69,6 +72,9 @@ export function SiteLayout({
             </a>
             <a className={styles.navLink} href="#contact">
               Contact
+            </a>
+            <a className={styles.navLink} href="#insights">
+              Insights
             </a>
           </nav>
         ) : (

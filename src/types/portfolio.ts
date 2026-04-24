@@ -15,6 +15,16 @@ export type PortfolioData = {
   experience: ExperienceItem[]
   projects: Project[]
   education: EducationItem[]
+  caseStudies?: {
+    title: string
+    slug: string
+    summary: string
+  }[]
+  articles?: {
+    title: string
+    slug: string
+    summary: string
+  }[]
 }
 
 export type ProfileEditable = Omit<Profile, 'photo'> & {

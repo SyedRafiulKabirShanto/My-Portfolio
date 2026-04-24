@@ -24,4 +24,6 @@ export const defaultPortfolioData: PortfolioData = {
   experience,
   projects,
   skills,
+  caseStudies: [],
+  articles: [],
 }

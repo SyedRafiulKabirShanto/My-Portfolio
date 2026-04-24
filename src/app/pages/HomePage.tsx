@@ -20,8 +20,8 @@ export function HomePage({ data }: { data: PortfolioData }) {
           </div>
 
           <h1 className={styles.title}>
-            Building reliable enterprise software with <span className={styles.em}>.NET</span> and{' '}
-            <span className={styles.em}>Angular</span>.
+            Software Engineer (<span className={styles.em}>.NET</span> | <span className={styles.em}>Angular</span> |{' '}
+            <span className={styles.em}>ERP Integration</span>)
           </h1>
 
           <p className={styles.subtitle}>{profile.summary}</p>
@@ -34,11 +34,16 @@ export function HomePage({ data }: { data: PortfolioData }) {
           </div>
 
           <div className={styles.ctas}>
-            <LinkButton href={profile.contact.email} variant="primary">
-              <IconMail />
-              Email me
+            <LinkButton href="#projects" variant="primary">
+              View Projects
             </LinkButton>
-            <LinkButton href={profile.contact.linkedin} variant="secondary" target="_blank" rel="noreferrer">
+            <LinkButton href="#contact" variant="secondary">
+              Contact Me
+            </LinkButton>
+          </div>
+
+          <div className={styles.secondaryLinks}>
+            <LinkButton href={profile.contact.linkedin} variant="ghost" target="_blank" rel="noreferrer">
               <IconLinkedIn />
               LinkedIn
             </LinkButton>
@@ -61,6 +66,40 @@ export function HomePage({ data }: { data: PortfolioData }) {
           </div>
         </div>
       </section>
+
+      <Section
+        id="highlights"
+        title="Key highlights"
+        subtitle="Enterprise strengths that map directly to real-world product delivery."
+      >
+        <div className={styles.highlightsGrid}>
+          <Card title="2+ years in .NET ecosystem">
+            <p className={styles.cardText}>
+              Delivered production systems using ASP.NET Core, SQL Server, and Angular across enterprise product teams.
+            </p>
+          </Card>
+          <Card title="nopCommerce plugin delivery">
+            <p className={styles.cardText}>
+              Built and maintained custom plugins and integrations for nopCommerce implementations in versions 4.60-4.90.
+            </p>
+          </Card>
+          <Card title="ERP + API integrations">
+            <p className={styles.cardText}>
+              Integrated ERP and third-party services using OData and OAuth2 to support accounting and operations workflows.
+            </p>
+          </Card>
+          <Card title="SQL performance focus">
+            <p className={styles.cardText}>
+              Optimized query-heavy backend paths and data synchronization workflows for stable production throughput.
+            </p>
+          </Card>
+          <Card title="Azure and CI/CD delivery">
+            <p className={styles.cardText}>
+              Worked with Azure-hosted environments and CI/CD pipelines to ship reliable updates with faster release cycles.
+            </p>
+          </Card>
+        </div>
+      </Section>
 
       <Section id="strengths" title="Core strengths" subtitle="What you can rely on me for in large, real-world systems.">
         <div className={styles.strengthGrid}>
@@ -167,11 +206,17 @@ export function HomePage({ data }: { data: PortfolioData }) {
                   </Tag>
                 ))}
               </div>
-              <ul className={styles.list}>
-                {p.responsibilities.slice(0, 4).map((r) => (
-                  <li key={r}>{r}</li>
-                ))}
-              </ul>
+              <div className={styles.projectBody}>
+                <p className={styles.projectLine}>
+                  <strong>Problem:</strong> {p.problem}
+                </p>
+                <p className={styles.projectLine}>
+                  <strong>Solution:</strong> {p.solution}
+                </p>
+                <p className={styles.projectLine}>
+                  <strong>Impact:</strong> {p.impact}
+                </p>
+              </div>
             </Card>
           ))}
         </div>
@@ -196,9 +241,9 @@ export function HomePage({ data }: { data: PortfolioData }) {
       <Section id="contact" title="Contact" subtitle="Fastest way to reach me is email.">
         <div className={styles.contactCard}>
           <div className={styles.contactLeft}>
-            <div className={styles.contactTitle}>Let’s talk.</div>
+            <div className={styles.contactTitle}>Open to .NET and Angular opportunities.</div>
             <div className={styles.contactText}>
-              If you’re hiring for .NET / Angular roles (or a versatile engineer who learns fast), I’d love to connect.
+              If you are hiring for backend-focused product teams or integration-heavy roles, feel free to reach out directly.
             </div>
           </div>
           <div className={styles.contactRight}>
@@ -216,6 +261,14 @@ export function HomePage({ data }: { data: PortfolioData }) {
             </LinkButton>
           </div>
         </div>
+      </Section>
+
+      <Section
+        id="insights"
+        title="Insights and case studies (coming soon)"
+        subtitle="This portfolio is structured to expand with technical write-ups, architecture notes, and delivery case studies."
+      >
+        <div className={styles.comingSoon}>Planned: engineering write-ups, architecture case studies, and production lessons learned.</div>
       </Section>
     </div>
   )
